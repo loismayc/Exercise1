@@ -12,14 +12,18 @@ namespace Exercise1{
         MobilePhone mobilePhone2 = new MobilePhone("Apple", "Midnight", sim2, "iPhone 14");
         //2 instance of smartphone
         SmartPhone smartPhone1 = new SmartPhone("Oppo", "Black", sim1, "F5", "Chrome");
-        SmartPhone smartPhone2 = new SmartPhone("Blackberry", "Red", sim1, "B1", "Edge");
+        SmartPhone smartPhone2 = new SmartPhone("Blackberry", "Red", sim2, "B1", "Edge");
 
         //mobilephone talking to another mobilephone
         mobilePhone1.Call(mobilePhone2);
+        mobilePhone2.Call(mobilePhone1);
+
         //smartphone talking to another smartphone
         smartPhone1.CallFromBrowser(smartPhone2);
+        smartPhone2.CallFromBrowser(smartPhone1);
 
-        App app = new App("Instagram", 2.23f);
+
+        App app = new App("Instagram", 20.23f);
         App app1 = new App("Facebook", 5.13f);
 
         smartPhone1.AddApplication(app);

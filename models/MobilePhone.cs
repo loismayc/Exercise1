@@ -3,7 +3,7 @@ namespace Exercise1 {
     public class MobilePhone {
         private string brand;
         private string color;
-        public SimCard simCard {get;set;}
+        public SimCard simCard;
         private string model;
 
         public MobilePhone (string brand, string color, SimCard simCard, string model){
@@ -13,8 +13,12 @@ namespace Exercise1 {
             this.model = model;
         }
 
-        public SimCard GetPhoneNumber(){
-            return simCard;
+        public string GetPhoneNumber(){
+            return simCard.phoneNumber;
+        }
+
+        public void SwapSimCard(SimCard simCard){
+            this.simCard = simCard;
         }
         
         public void Call (string phoneNumber){
